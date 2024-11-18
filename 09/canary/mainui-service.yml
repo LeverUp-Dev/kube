@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mainui-svc
+spec:
+  type: ClusterIP
+  clusterIP: 10.96.10.10
+  selector:
+    app: mainui
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
